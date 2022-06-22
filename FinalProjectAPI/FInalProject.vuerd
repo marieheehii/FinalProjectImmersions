@@ -1,0 +1,194 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -154.99999384085365,
+    "scrollLeft": -586.6666433546288,
+    "zoomLevel": 0.9,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "Custumer",
+        "comment": "",
+        "columns": [
+          {
+            "name": "CostumerID",
+            "comment": "Identity(1,1)",
+            "dataType": "int ",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71.34814453125,
+              "widthComment": 70.6435546875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c618b41d-02ba-4b13-a792-9c433676fdee"
+          },
+          {
+            "name": "FIrstName",
+            "comment": "",
+            "dataType": "nvarchar(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62.6708984375,
+              "widthComment": 60,
+              "widthDataType": 82.92626953125,
+              "widthDefault": 60
+            },
+            "id": "497c8096-4d49-4397-aa2e-13c61d97a5ec"
+          },
+          {
+            "name": "LastName",
+            "comment": "",
+            "dataType": "nvarchar(100)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61.2490234375,
+              "widthComment": 60,
+              "widthDataType": 82.92626953125,
+              "widthDefault": 60
+            },
+            "id": "e8f11a6b-ba16-404e-93f3-7b1f5f7a1c5d"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 571.4582,
+          "top": 60.6253,
+          "zIndex": 1,
+          "widthName": 60,
+          "widthComment": 60,
+          "color": "#FF0000"
+        },
+        "visible": true,
+        "id": "8c7124bb-21b7-4186-aa8d-bb8f07f1a6cf"
+      },
+      {
+        "name": "Inventory",
+        "comment": "",
+        "columns": [
+          {
+            "name": "",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b1f732ee-d08c-41f4-839e-634ca0376bd0"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 786.6666433546288,
+          "top": 254.99999384085365,
+          "zIndex": 2,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "a3bb6614-91d2-4da7-9db2-6ba3259cec59"
+      },
+      {
+        "name": "Recipes",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 992.2216,
+          "top": 159.6296,
+          "zIndex": 3,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "aa6979ab-b43f-4164-9c1b-ee37ce81d0db"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}

@@ -1,0 +1,14 @@
+C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.deps.json
+C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.runtimeconfig.json
+C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.dll
+C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.pdb
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.csproj.AssemblyReference.cache
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.AssemblyInfoInputs.cache
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.AssemblyInfo.cs
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.csproj.CoreCompileInputs.cache
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.dll
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\refint\FinalProject.Data.dll
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.pdb
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.genruntimeconfig.cache
+C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\ref\FinalProject.Data.dll
