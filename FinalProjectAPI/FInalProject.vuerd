@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -39,
-    "scrollLeft": -462.66664335462883,
-    "zoomLevel": 1,
+    "scrollTop": -201,
+    "scrollLeft": -204.66664335462883,
+    "zoomLevel": 0.8,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -43,11 +43,11 @@
   "table": {
     "tables": [
       {
-        "name": "Custumer",
+        "name": "Consumer",
         "comment": "",
         "columns": [
           {
-            "name": "CostumerID",
+            "name": "ConsumerID",
             "comment": "Identity(1,1)",
             "dataType": "int ",
             "default": "",
@@ -62,7 +62,7 @@
               "pk": true,
               "fk": false,
               "pfk": false,
-              "widthName": 71.34814453125,
+              "widthName": 74.96630859375,
               "widthComment": 70.6435546875,
               "widthDataType": 60,
               "widthDefault": 60
@@ -114,14 +114,60 @@
               "widthDefault": 60
             },
             "id": "e8f11a6b-ba16-404e-93f3-7b1f5f7a1c5d"
+          },
+          {
+            "name": "ListID",
+            "comment": "Identity(100)",
+            "dataType": "int",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74.26171875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a8945e64-ed6a-48a1-81ab-4201953c076e"
+          },
+          {
+            "name": "RecipeID",
+            "comment": "Identity(1,1)",
+            "dataType": "int",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.6435546875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "031d89cf-ad2a-4ae0-9440-81285df99ce4"
           }
         ],
         "ui": {
           "active": false,
-          "left": 571.4582,
-          "top": 60.6253,
-          "zIndex": 5,
-          "widthName": 60,
+          "left": 511.4582,
+          "top": 15,
+          "zIndex": 140,
+          "widthName": 61.96630859375,
           "widthComment": 60,
           "color": "#FF0000"
         },
@@ -133,107 +179,61 @@
         "comment": "",
         "columns": [
           {
-            "name": "id",
-            "comment": "",
-            "dataType": "data",
+            "name": "ItemID",
+            "comment": "Identity(1,1)",
+            "dataType": "int",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
+              "widthComment": 70.6435546875,
               "widthDataType": 60,
               "widthDefault": 60
             },
             "id": "b1f732ee-d08c-41f4-839e-634ca0376bd0"
           },
           {
-            "name": "item name",
+            "name": "Item Name",
             "comment": "",
-            "dataType": "",
+            "dataType": "nvarchar(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 62.68994140625,
+              "widthName": 65.57177734375,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 82.92626953125,
               "widthDefault": 60
             },
             "id": "a54784e7-463f-4576-9268-d430c1ec7e5b"
           },
           {
-            "name": "Food Category/Type",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 119.79345703125,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "fd2b93e8-6ed4-459c-97b3-b25d5ad3c660"
-          },
-          {
-            "name": "Expiration Date",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 90.8798828125,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "1970bc2a-e14f-4aba-9ee6-6842fff6774d"
-          },
-          {
             "name": "Amount",
             "comment": "",
-            "dataType": "",
+            "dataType": "int",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -246,13 +246,59 @@
               "widthDefault": 60
             },
             "id": "48f218e8-19ba-41b8-a314-73b7e43129c1"
+          },
+          {
+            "name": "Food Category/Type",
+            "comment": "",
+            "dataType": "nvarchar(100)/enum",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 119.79345703125,
+              "widthComment": 60,
+              "widthDataType": 119.05712890625,
+              "widthDefault": 60
+            },
+            "id": "fd2b93e8-6ed4-459c-97b3-b25d5ad3c660"
+          },
+          {
+            "name": "Expiration Date",
+            "comment": "",
+            "dataType": "DateTime",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 90.8798828125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "1970bc2a-e14f-4aba-9ee6-6842fff6774d"
           }
         ],
         "ui": {
           "active": false,
-          "left": 567.7778,
-          "top": 201.6672,
-          "zIndex": 42,
+          "left": 34.4447,
+          "top": 212.5002,
+          "zIndex": 148,
           "widthName": 60,
           "widthComment": 60
         },
@@ -264,15 +310,84 @@
         "comment": "",
         "columns": [
           {
-            "name": "ID",
-            "comment": "",
-            "dataType": "Data",
+            "name": "RecipeID",
+            "comment": "Identity(1,1)",
+            "dataType": "int",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.6435546875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "481c8e39-b7f0-420a-bcd7-bd644d811a1d"
+          },
+          {
+            "name": "ItemID",
+            "comment": "Identity(1,1)",
+            "dataType": "int",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.6435546875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a4183265-d63b-4497-a2db-560567949ec9"
+          },
+          {
+            "name": "Ingredients (items)",
+            "comment": "",
+            "dataType": "nvarchar(500)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 109.64990234375,
+              "widthComment": 60,
+              "widthDataType": 82.92626953125,
+              "widthDefault": 60
+            },
+            "id": "47537c5d-a3cc-46b1-be69-7523838976c7"
+          },
+          {
+            "name": "Amount",
+            "comment": "",
+            "dataType": "int",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -280,52 +395,6 @@
               "fk": false,
               "pfk": false,
               "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "481c8e39-b7f0-420a-bcd7-bd644d811a1d"
-          },
-          {
-            "name": "Ingredients",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 66.32080078125,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "47537c5d-a3cc-46b1-be69-7523838976c7"
-          },
-          {
-            "name": "Amount Needed",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 95.95166015625,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -335,13 +404,13 @@
           {
             "name": "Type",
             "comment": "",
-            "dataType": "",
+            "dataType": "nvarchar(100)/enum",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -350,7 +419,7 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 119.05712890625,
               "widthDefault": 60
             },
             "id": "18376d37-fcfc-40af-9250-096075c78896"
@@ -358,13 +427,13 @@
           {
             "name": "Instructions",
             "comment": "",
-            "dataType": "",
+            "dataType": "nvarchar(1000)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -373,7 +442,7 @@
               "pfk": false,
               "widthName": 68.47265625,
               "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 90.15625,
               "widthDefault": 60
             },
             "id": "6d5b0fe9-0875-4587-bbf6-34abb237b609"
@@ -381,9 +450,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 573.3323,
-          "top": 381.8524,
-          "zIndex": 84,
+          "left": 588.3325,
+          "top": 568.2407,
+          "zIndex": 143,
           "widthName": 60,
           "widthComment": 60
         },
@@ -395,15 +464,38 @@
         "comment": "",
         "columns": [
           {
-            "name": "Id",
+            "name": "ListID",
+            "comment": "Identity(100)",
+            "dataType": "int",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74.26171875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e48ef843-1efe-4daa-8cc0-67b3f7c6cf17"
+          },
+          {
+            "name": "Items",
             "comment": "",
-            "dataType": "",
+            "dataType": "nvarchar(100)",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -412,44 +504,44 @@
               "pfk": false,
               "widthName": 60,
               "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "e48ef843-1efe-4daa-8cc0-67b3f7c6cf17"
-          },
-          {
-            "name": "Items needed",
-            "comment": "",
-            "dataType": "",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 80.7744140625,
-              "widthComment": 60,
-              "widthDataType": 60,
+              "widthDataType": 82.92626953125,
               "widthDefault": 60
             },
             "id": "ec6f7cbd-896c-4427-9bab-e52475cbc0c6"
           },
           {
-            "name": "Amount",
-            "comment": "",
-            "dataType": "",
+            "name": "ItemID",
+            "comment": "Identity(1,1)",
+            "dataType": "int",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 70.6435546875,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f08a6bbf-b3f8-4526-a96f-ac9768d1e7ec"
+          },
+          {
+            "name": "Amount",
+            "comment": "",
+            "dataType": "int",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -464,34 +556,34 @@
             "id": "78d14905-085a-4d54-9dff-56910c5eb572"
           },
           {
-            "name": "",
-            "comment": "",
-            "dataType": "",
+            "name": "ConsumerID",
+            "comment": "Identity(1,1)",
+            "dataType": "int ",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
+              "widthName": 74.96630859375,
+              "widthComment": 70.6435546875,
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "75a6fc7d-b73a-4089-ae2c-06d35912ba42"
+            "id": "9b444bf3-4df3-45e6-9c3b-db2978aef741"
           }
         ],
         "ui": {
           "active": false,
-          "left": 578.5558,
-          "top": 575.556,
-          "zIndex": 110,
+          "left": 961.3335,
+          "top": 258.3338,
+          "zIndex": 144,
           "widthName": 72.07177734375,
           "widthComment": 60
         },
@@ -505,6 +597,111 @@
     "memos": []
   },
   "relationship": {
-    "relationships": []
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "a3bb6614-91d2-4da7-9db2-6ba3259cec59",
+          "columnIds": [
+            "b1f732ee-d08c-41f4-839e-634ca0376bd0"
+          ],
+          "x": 510.938840625,
+          "y": 255.3752,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "aa6979ab-b43f-4164-9c1b-ee37ce81d0db",
+          "columnIds": [
+            "a4183265-d63b-4497-a2db-560567949ec9"
+          ],
+          "x": 588.3325,
+          "y": 664.2407,
+          "direction": "left"
+        },
+        "constraintName": "fk_inventory_to_recipes",
+        "visible": true,
+        "id": "dcffb55d-38a5-45fe-931f-a9b2ad1f2ffe"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "a3bb6614-91d2-4da7-9db2-6ba3259cec59",
+          "columnIds": [
+            "b1f732ee-d08c-41f4-839e-634ca0376bd0"
+          ],
+          "x": 510.938840625,
+          "y": 341.1252,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "3ccc77b2-3057-45d3-bacc-4d8faa90dbaf",
+          "columnIds": [
+            "f08a6bbf-b3f8-4526-a96f-ac9768d1e7ec"
+          ],
+          "x": 961.3335,
+          "y": 386.9588,
+          "direction": "left"
+        },
+        "constraintName": "fk_inventory_to_grocery list",
+        "visible": true,
+        "id": "e4518f93-5722-43e4-aa66-5b81f1c3c40f"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "3ccc77b2-3057-45d3-bacc-4d8faa90dbaf",
+          "columnIds": [
+            "e48ef843-1efe-4daa-8cc0-67b3f7c6cf17"
+          ],
+          "x": 961.3335,
+          "y": 301.2088,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "8c7124bb-21b7-4186-aa8d-bb8f07f1a6cf",
+          "columnIds": [
+            "a8945e64-ed6a-48a1-81ab-4201953c076e"
+          ],
+          "x": 910.612496875,
+          "y": 100.75,
+          "direction": "right"
+        },
+        "constraintName": "fk_grocery list_to_consumer",
+        "visible": true,
+        "id": "813a8765-57b9-4fd6-8cb7-008866fada42"
+      },
+      {
+        "identification": false,
+        "relationshipType": "OneN",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "aa6979ab-b43f-4164-9c1b-ee37ce81d0db",
+          "columnIds": [
+            "481c8e39-b7f0-420a-bcd7-bd644d811a1d"
+          ],
+          "x": 821.50779296875,
+          "y": 568.2407,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "8c7124bb-21b7-4186-aa8d-bb8f07f1a6cf",
+          "columnIds": [
+            "031d89cf-ad2a-4ae0-9440-81285df99ce4"
+          ],
+          "x": 711.0353484375,
+          "y": 186.5,
+          "direction": "bottom"
+        },
+        "constraintName": "fk_recipes_to_consumer",
+        "visible": true,
+        "id": "f6c7fe00-1d36-494d-8a89-4f27eb88aafe"
+      }
+    ]
   }
 }
