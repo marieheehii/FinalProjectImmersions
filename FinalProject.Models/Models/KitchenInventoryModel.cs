@@ -7,4 +7,11 @@ using System.Threading.Tasks;
     public class KitchenInventoryModel
     {
         
+        public int ID { get; set; }
+        
+        public string ItemsName { get; set; }
+
+        public ItemCategory Category  { get; set; }
+        public int Amount { get; set; }
+        public DateTime ExpirationDate { get; set; }
     }
