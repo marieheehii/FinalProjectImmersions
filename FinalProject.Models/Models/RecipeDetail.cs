@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-    public class Recipe
+    public class RecipeDetail
     {
         public int RecipeID { get; set; }
         public string Name { get; set; }
@@ -12,5 +12,4 @@ using System.Threading.Tasks;
         public int IngredientAmounts { get; set; }
         public RecipeType Type { get; set; }
         public string Instructions { get; set; }
-
     }
