@@ -8,7 +8,7 @@ public class RecipeEdit
     public int RecipeID { get; set; }
     public string Name { get; set; }
     public string Ingredients { get; set; }
-    public List<KitchenIventory> Items { get; set; }
+    public List<KitchenInventory> Items { get; set; }
     public int IngredientAmounts { get; set; }
     public RecipeType Type { get; set; }
     public string Instructions { get; set; }
