@@ -1,5 +1,4 @@
-
-    public enum ItemCategory
+ public enum ItemCategory
     {
         Fruit =1,
         Vegetables,
