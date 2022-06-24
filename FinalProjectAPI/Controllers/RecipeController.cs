@@ -4,7 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-    public class RecipeController
+public class RecipeController
+{
+    public readonly IRecipe _recipeService;
+    public RecipeController(IRecipe recipeService)
     {
-        
+        _recipeService = recipeService;
     }
+}
