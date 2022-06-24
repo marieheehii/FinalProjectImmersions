@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-public class RecipeService 
+public class RecipeService
 {
     private readonly ApplicationDbContext _context;
     public RecipeService(ApplicationDbContext context)
@@ -29,7 +29,8 @@ public class RecipeService
     }
     public async Task<IEnumerable<RecipeListItem>> ListAllRecipes()
     {
-        return _context.
+        var recipes = await _context.Recipes.ToListAsync();
+        return Ok(recipes);
     }
     public async Task<RecipeEdit> UpdateRecipe(int RecipeID)
     {
@@ -49,7 +50,11 @@ public class RecipeService
     }
     public async Task<RecipeEdit> DeleteRecipe(int RecipeID)
     {
+        var recipe = await _context.Recipes.FindAsync(RecipeID);
 
+        _context.Recipes.Remove(recipe);
+        await _context.SaveChangesAsync();
+        return Ok();
     }
     public async Task<RecipeEdit> GetRecipeByCategory(RecipeType type)
     {
@@ -57,6 +62,6 @@ public class RecipeService
     }
     public async Task<RecipeItems> GetItemsForRecipe(List<RecipeItems> items) //* get terrys help
     {
-
+        //terrys help
     }
 }
