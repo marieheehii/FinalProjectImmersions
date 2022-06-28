@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 public class RecipeService
 {
@@ -27,18 +28,23 @@ public class RecipeService
 
         return numberOfChanges == 1;
     }
-    public async Task<IEnumerable<RecipeListItem>> ListAllRecipes()
+    public async Task<IEnumerable<RecipeListItem>> ListAllRecipesAsync()
     {
-        var recipes = await _context.Recipes.ToListAsync();
-        return Ok(recipes);
+        var recipes = await _context.Recipes.Select(r => new RecipeListItem{
+            RecipeID = r.RecipeID,
+            Name=r.Name,
+            Type=r.Type
+        }).ToListAsync();
+
+        return recipes;
     }
-    public async Task<RecipeEdit> UpdateRecipe(int RecipeID)
+    public async Task<RecipeEdit> UpdateRecipeAsync(int RecipeID, RecipeEdit model)
     {
         var recipe = await _context.Recipes.FindAsync(RecipeID);
         if (recipe is null)
             return null;
 
-        return new RecipeDetail
+        return new RecipeEdit
         {
             Name = model.Name,
             Ingredients = model.Ingredients,
@@ -48,17 +54,36 @@ public class RecipeService
         };
 
     }
-    public async Task<RecipeEdit> DeleteRecipe(int RecipeID)
+    public async Task<bool> DeleteRecipeAsync(int RecipeID)
     {
         var recipe = await _context.Recipes.FindAsync(RecipeID);
 
+        if (recipe is null)
+        {
+            return false;
+        }
+
         _context.Recipes.Remove(recipe);
         await _context.SaveChangesAsync();
-        return Ok();
+        return true;
     }
-    public async Task<RecipeEdit> GetRecipeByCategory(RecipeType type)
+
+    public async Task<RecipeDetail> GetRecipeByCategoryAsync(RecipeType type)
     {
-        return await _context.Recipes.FirstOrDefaultAsync(Recipe => Recipe.RecipeType.ToLower() == recipeType.ToLower());
+        var recipe = await _context.Recipes.Include(r=> r.Items).FirstOrDefaultAsync(Recipe => Recipe.Type == type);
+        if (recipe is null)
+        return null;
+
+        return new RecipeDetail
+        {
+            RecipeID= recipe.RecipeID,
+            Name= recipe.Name,
+            Ingredients=recipe.Ingredients,
+            Items=recipe.Items,
+            IngredientAmounts=recipe.IngredientAmounts,
+            Type=recipe.Type,
+            Instructions=recipe.Instructions
+        };
     }
     
     // public async Task<RecipeItems> GetItemsForRecipe(List<RecipeItems> items) //* get terrys help

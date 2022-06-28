@@ -1981,19 +1981,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hanyo\\.nuget\\packages\\": {}
+    "/Users/hales/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\144_immersions\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj",
+      "projectUniqueName": "/Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/FinalProject.Data.csproj",
       "projectName": "FinalProject.Data",
-      "projectPath": "C:\\144_immersions\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj",
-      "packagesPath": "C:\\Users\\Hanyo\\.nuget\\packages\\",
-      "outputPath": "C:\\144_immersions\\FinalProject\\FinalProject.Data\\obj\\",
+      "projectPath": "/Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/FinalProject.Data.csproj",
+      "packagesPath": "/Users/hales/.nuget/packages/",
+      "outputPath": "/Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hanyo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/hales/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -2047,7 +2047,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
       }
     }
   }
