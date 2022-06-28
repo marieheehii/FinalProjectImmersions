@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 public class RecipeService
 {
@@ -28,7 +27,7 @@ public class RecipeService
 
         return numberOfChanges == 1;
     }
-    /*public async Task<IEnumerable<RecipeListItem>> ListAllRecipes()
+    public async Task<IEnumerable<RecipeListItem>> ListAllRecipes()
     {
         var recipes = await _context.Recipes.ToListAsync();
         return Ok(recipes);
