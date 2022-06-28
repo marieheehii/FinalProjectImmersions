@@ -11,4 +11,15 @@ public class RecipeController
     {
         _recipeService = recipeService;
     }
+    
+    // [HttpPost]
+    // public async Task<IActionResult>
+
+    // [HttpGet]
+
+    // [HttpGet]
+
+    // [HttpPut]
+
+    // [HttpPut]
 }

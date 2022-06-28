@@ -60,9 +60,10 @@ public class RecipeService
     {
         return await _context.Recipes.FirstOrDefaultAsync(Recipe => Recipe.RecipeType.ToLower() == recipeType.ToLower());
     }
-    public async Task<RecipeItems> GetItemsForRecipe(List<RecipeItems> items) //* get terrys help
-    {
-        //terrys help
-        //* 2.0 version
-    }
+    
+    // public async Task<RecipeItems> GetItemsForRecipe(List<RecipeItems> items) //* get terrys help
+    // {
+            //* terrys help
+           //* 2.0 version
+    // }
 }
