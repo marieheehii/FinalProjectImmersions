@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:/144_immersions/FinalProject/FinalProject.Services/bin/Debug/net6.0/FinalProject.Services.deps.json
 C:/144_immersions/FinalProject/FinalProject.Services/bin/Debug/net6.0/FinalProject.Services.dll
 C:/144_immersions/FinalProject/FinalProject.Services/bin/Debug/net6.0/FinalProject.Services.pdb
@@ -34,6 +35,8 @@ C:/144_immersions/FinalProject/FinalProject.Services/obj/Debug/net6.0/ref/FinalP
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Services/obj/Debug/net6.0/FinalProject.Services.pdb
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Services/obj/Debug/net6.0/ref/FinalProject.Services.dll
 =======
+=======
+>>>>>>> 815546dba36da8407b45bd538b265c4a65c23c30
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Services/obj/Debug/net6.0/FinalProject.Services.csproj.AssemblyReference.cache
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Services/obj/Debug/net6.0/FinalProject.Services.GeneratedMSBuildEditorConfig.editorconfig
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Services/obj/Debug/net6.0/FinalProject.Services.AssemblyInfoInputs.cache
@@ -51,4 +54,24 @@ C:/144_immersions/FinalProject/FinalProject.Services/obj/Debug/net6.0/ref/FinalP
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Services/bin/Debug/net6.0/FinalProject.Models.pdb
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Services/obj/Debug/net6.0/FinalProject.Services.csproj.CopyComplete
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Services/obj/Debug/net6.0/ref/FinalProject.Services.dll
+<<<<<<< HEAD
 >>>>>>> 37d6199dd2f6120ce07771a57a7e4a4839a236da
+=======
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.dll
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\refint\FinalProject.Services.dll
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.pdb
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.csproj.AssemblyReference.cache
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.AssemblyInfoInputs.cache
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.AssemblyInfo.cs
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.csproj.CoreCompileInputs.cache
+C:\144_immersions\FinalProject\FinalProject.Services\bin\Debug\net6.0\FinalProject.Services.deps.json
+C:\144_immersions\FinalProject\FinalProject.Services\bin\Debug\net6.0\FinalProject.Services.dll
+C:\144_immersions\FinalProject\FinalProject.Services\bin\Debug\net6.0\FinalProject.Services.pdb
+C:\144_immersions\FinalProject\FinalProject.Services\bin\Debug\net6.0\FinalProject.Data.dll
+C:\144_immersions\FinalProject\FinalProject.Services\bin\Debug\net6.0\FinalProject.Models.dll
+C:\144_immersions\FinalProject\FinalProject.Services\bin\Debug\net6.0\FinalProject.Data.pdb
+C:\144_immersions\FinalProject\FinalProject.Services\bin\Debug\net6.0\FinalProject.Models.pdb
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\FinalProject.Services.csproj.CopyComplete
+C:\144_immersions\FinalProject\FinalProject.Services\obj\Debug\net6.0\ref\FinalProject.Services.dll
+>>>>>>> 815546dba36da8407b45bd538b265c4a65c23c30

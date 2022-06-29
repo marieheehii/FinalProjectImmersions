@@ -27,8 +27,7 @@ public class CustomerServices : ICustomerService
 
         public async Task<bool> CreateCustomerAsync(CustomerModel model)
         {
-            // What if the user passes in empty data?
-            if (model is null)
+            if(model is null)
             {
                 return false;
             }
@@ -40,24 +39,18 @@ public class CustomerServices : ICustomerService
 
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
-            //This is ^ required for the database
             return true;
         }
 
         public async Task<bool> DeleteCustomerDetailsAsync(int id)
-       // Returning a bool, in simplicity 
         {
-            Customer customer = await _context.Customers.FindAsync(id);
-            //An '=' is the declaration, therefore treat it as 'law'
-            //Everything on the right is passed in its entirety to the variable on the left
-             if (customer is null)
-             {
-                 return false;
-             }
-             else
-             {
-                 _context.Customers.Remove(customer);
-                 return true;
-             }
+            var customer = await _context.Customers.FindAsync(id);
+            if(customer is null)
+            {
+                return false;
+            }
+            _context.Customers.Remove(customer);
+            await _context.SaveChangesAsync();
+            return true;
         }
     }

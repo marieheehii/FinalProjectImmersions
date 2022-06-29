@@ -34,7 +34,12 @@ public class RecipeController : ControllerBase
         return Ok(recipes);
     }
 
-    // [HttpGet]
+    [HttpGet]
+    public async Task<IActionResult> GetRecipeByCategory(RecipeType type)
+    {
+        
+    }
+
 
     // [HttpPut]
 
