@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
-
-    public class CustomerService : ICustomerService
+public class CustomerServices : ICustomerService
     {
         private readonly ApplicationDbContext _context;
         public CustomerServices(ApplicationDbContext context)
@@ -15,12 +15,11 @@ using System.Threading.Tasks;
 
         public async Task<IEnumerable<CustomerListItem>> GetCustomerListItemsAsync()
         {
-            var customers = await _context.Characters
-            .Select(entity => new CharacterListItem
+            var customers = await _context.Customers
+            .Select(entity => new CustomerListItem
             {
-                Id = entity.ID,
-                FirstName = entity.FirstName,
-                LastName = entity.LastName
+                Id = entity.Id,
+                FirstName = entity.FirstName
             })
             .ToListAsync();
             return customers;
@@ -28,28 +27,37 @@ using System.Threading.Tasks;
 
         public async Task<bool> CreateCustomerAsync(CustomerModel model)
         {
-            var customer = new Character
+            // What if the user passes in empty data?
+            if (model is null)
+            {
+                return false;
+            }
+            var customer = new Customer
             {
                 FirstName = model.FirstName,
                 LastName = model.LastName, 
             };
 
             _context.Customers.Add(customer);
+            await _context.SaveChangesAsync();
+            //This is ^ required for the database
+            return true;
         }
 
-        public async Task<CustomerDelete> DeleteCustomerDetailsAsync(int id)
+        public async Task<bool> DeleteCustomerDetailsAsync(int id)
+       // Returning a bool, in simplicity 
         {
-            Console.Clear();
-            Console.WriteLine("Please Enter the Customer's ID");
-            int Input = int.Parse(Console.ReadLine());
-            if (_context.DeleteCustomerDetailsAsync(userInput))
-            {
-                System.Console.WriteLine("Customer was Successfully Deleted");
-            }
-            else
-            {
-                System.Console.WriteLine("Sorry, Customer was not Deleted.");
-            }
-            PressAnyKeyToContinue();
+            Customer customer = await _context.Customers.FindAsync(id);
+            //An '=' is the declaration, therefore treat it as 'law'
+            //Everything on the right is passed in its entirety to the variable on the left
+             if (customer is null)
+             {
+                 return false;
+             }
+             else
+             {
+                 _context.Customers.Remove(customer);
+                 return true;
+             }
         }
     }

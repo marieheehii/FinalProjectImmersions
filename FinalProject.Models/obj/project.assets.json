@@ -1942,19 +1942,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Hanyo\\.nuget\\packages\\": {}
+    "/Users/zackkramer/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\144_immersions\\FinalProject\\FinalProject.Models\\FinalProject.Models.csproj",
+      "projectUniqueName": "/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/FinalProject.Models.csproj",
       "projectName": "FinalProject.Models",
-      "projectPath": "C:\\144_immersions\\FinalProject\\FinalProject.Models\\FinalProject.Models.csproj",
-      "packagesPath": "C:\\Users\\Hanyo\\.nuget\\packages\\",
-      "outputPath": "C:\\144_immersions\\FinalProject\\FinalProject.Models\\obj\\",
+      "projectPath": "/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/FinalProject.Models.csproj",
+      "packagesPath": "/Users/zackkramer/.nuget/packages/",
+      "outputPath": "/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Hanyo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/zackkramer/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1966,8 +1966,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\144_immersions\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj": {
-              "projectPath": "C:\\144_immersions\\FinalProject\\FinalProject.Data\\FinalProject.Data.csproj"
+            "/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Data/FinalProject.Data.csproj": {
+              "projectPath": "/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Data/FinalProject.Data.csproj"
             }
           }
         }
@@ -1996,7 +1996,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
       }
     }
   }
