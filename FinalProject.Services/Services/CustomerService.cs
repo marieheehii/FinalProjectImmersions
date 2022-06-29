@@ -2,13 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
-
-    public class CustomerService : ICustomerService
+public class CustomerServices : ICustomerService
     {
-<<<<<<< HEAD
-        
-=======
         private readonly ApplicationDbContext _context;
         public CustomerServices(ApplicationDbContext context)
         {
@@ -18,12 +15,11 @@ using System.Threading.Tasks;
 
         public async Task<IEnumerable<CustomerListItem>> GetCustomerListItemsAsync()
         {
-            var customers = await _context.Characters
-            .Select(entity => new CharacterListItem
+            var customers = await _context.Customers
+            .Select(entity => new CustomerListItem
             {
-                Id = entity.ID,
-                FirstName = entity.FirstName,
-                LastName = entity.LastName
+                Id = entity.Id,
+                FirstName = entity.FirstName
             })
             .ToListAsync();
             return customers;
@@ -31,29 +27,30 @@ using System.Threading.Tasks;
 
         public async Task<bool> CreateCustomerAsync(CustomerModel model)
         {
-            var customer = new Character
+            if(model is null)
+            {
+                return false;
+            }
+            var customer = new Customer
             {
                 FirstName = model.FirstName,
                 LastName = model.LastName, 
             };
 
             _context.Customers.Add(customer);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public async Task<CustomerDelete> DeleteCustomerDetailsAsync(int id)
+        public async Task<bool> DeleteCustomerDetailsAsync(int id)
         {
-            Console.Clear();
-            Console.WriteLine("Please Enter the Customer's ID");
-            int Input = int.Parse(Console.ReadLine());
-            if (_context.DeleteCustomerDetailsAsync(userInput))
+            var customer = await _context.Customers.FindAsync(id);
+            if(customer is null)
             {
-                System.Console.WriteLine("Customer was Successfully Deleted");
+                return false;
             }
-            else
-            {
-                System.Console.WriteLine("Sorry, Customer was not Deleted.");
-            }
-            PressAnyKeyToContinue();
+            _context.Customers.Remove(customer);
+            await _context.SaveChangesAsync();
+            return true;
         }
->>>>>>> 3f539aff0fb3357e3f9dd120b0279fc38edc5a03
     }
