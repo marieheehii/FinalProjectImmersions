@@ -6,12 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "FinalProject.Models/1.0.0": {
+      "FinalProject.Services/1.0.0": {
         "dependencies": {
-          "FinalProject.Data": "1.0.0"
+          "FinalProject.Data": "1.0.0",
+          "FinalProject.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6"
         },
         "runtime": {
-          "FinalProject.Models.dll": {}
+          "FinalProject.Services.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.6": {
@@ -521,11 +523,19 @@
         "runtime": {
           "FinalProject.Data.dll": {}
         }
+      },
+      "FinalProject.Models/1.0.0": {
+        "dependencies": {
+          "FinalProject.Data": "1.0.0"
+        },
+        "runtime": {
+          "FinalProject.Models.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "FinalProject.Models/1.0.0": {
+    "FinalProject.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -846,6 +856,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "FinalProject.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FinalProject.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -13,7 +13,6 @@ C:/144_immersions/FinalProject/FinalProject.Data/obj/Debug/net6.0/refint/FinalPr
 C:/144_immersions/FinalProject/FinalProject.Data/obj/Debug/net6.0/FinalProject.Data.pdb
 C:/144_immersions/FinalProject/FinalProject.Data/obj/Debug/net6.0/FinalProject.Data.genruntimeconfig.cache
 C:/144_immersions/FinalProject/FinalProject.Data/obj/Debug/net6.0/ref/FinalProject.Data.dll
-<<<<<<< HEAD
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/bin/Debug/net6.0/FinalProject.Data.deps.json
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/bin/Debug/net6.0/FinalProject.Data.runtimeconfig.json
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/bin/Debug/net6.0/FinalProject.Data.dll
@@ -28,7 +27,6 @@ C:/144_immersions/FinalProject/FinalProject.Data/obj/Debug/net6.0/ref/FinalProje
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/obj/Debug/net6.0/FinalProject.Data.pdb
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/obj/Debug/net6.0/FinalProject.Data.genruntimeconfig.cache
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Data/obj/Debug/net6.0/ref/FinalProject.Data.dll
-=======
 =======
 >>>>>>> 815546dba36da8407b45bd538b265c4a65c23c30
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Data/bin/Debug/net6.0/FinalProject.Data.deps.json
@@ -45,21 +43,4 @@ C:/144_immersions/FinalProject/FinalProject.Data/obj/Debug/net6.0/ref/FinalProje
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Data/obj/Debug/net6.0/FinalProject.Data.pdb
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Data/obj/Debug/net6.0/FinalProject.Data.genruntimeconfig.cache
 /Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Data/obj/Debug/net6.0/ref/FinalProject.Data.dll
-<<<<<<< HEAD
 >>>>>>> 37d6199dd2f6120ce07771a57a7e4a4839a236da
-=======
-C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.deps.json
-C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.runtimeconfig.json
-C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.dll
-C:\144_immersions\FinalProject\FinalProject.Data\bin\Debug\net6.0\FinalProject.Data.pdb
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.csproj.AssemblyReference.cache
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.AssemblyInfoInputs.cache
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.AssemblyInfo.cs
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.csproj.CoreCompileInputs.cache
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.dll
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\refint\FinalProject.Data.dll
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.pdb
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\FinalProject.Data.genruntimeconfig.cache
-C:\144_immersions\FinalProject\FinalProject.Data\obj\Debug\net6.0\ref\FinalProject.Data.dll
->>>>>>> 815546dba36da8407b45bd538b265c4a65c23c30
