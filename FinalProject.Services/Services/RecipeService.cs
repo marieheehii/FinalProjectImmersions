@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-public class RecipeService
+public class RecipeService : IRecipe
 {
     private readonly ApplicationDbContext _context;
     public RecipeService(ApplicationDbContext context)
@@ -85,10 +85,10 @@ public class RecipeService
             Instructions=recipe.Instructions
         };
     }
-    
+
     // public async Task<RecipeItems> GetItemsForRecipe(List<RecipeItems> items) //* get terrys help
     // {
-            //* terrys help
-           //* 2.0 version
+    //* terrys help
+    //* 2.0 version
     // }
 }
