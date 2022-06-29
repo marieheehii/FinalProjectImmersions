@@ -2,8 +2,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
-    public class CustomerController
+namespace FinalProjectAPI.Controllers
+{
+    [Route("[controller]")]
+    public class CustomerController : ControllerBase
     {
-        
+        private readonly ICustomerService customerService;
+
+        public CustomerController(ICustomerService customerService)
+        {
+            this.customerService = customerService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCustomers()
+        {
+            var customers = customerService.GetCustomerListItemsAsync();
+            return Ok(customers);
+        }
     }
+}
