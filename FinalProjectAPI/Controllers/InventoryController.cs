@@ -41,6 +41,8 @@ using Microsoft.AspNetCore.Http;
             return Ok(customers);
         }
 
+        [HttpPut]
+
         public async Task<IActionResult> UpdateInventory([FromBody] InventoryUpdate request)
     {
         if(!ModelState.IsValid)
@@ -58,5 +60,16 @@ using Microsoft.AspNetCore.Http;
         return await _service.DeleteInventoryItemAsync(id)
         ? Ok($"Item {id} was deleted from your inventory successfully.")
         : BadRequest($"Item {id} could not be deleted.");
+    }
+
+    [HttpGet("category/{categoryType}")]
+    public async Task<IActionResult> GetByType([FromRoute] ItemCategory categoryType)
+    {
+        var itemDetail = await _service.GetInventoryDetailByEnum(categoryType);
+        if(itemDetail is null)
+        {
+            return NotFound();
+        }
+        return Ok(itemDetail);
     }
     }

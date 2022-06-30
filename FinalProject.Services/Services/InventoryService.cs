@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using FinalProject.Data;
 using Microsoft.EntityFrameworkCore;
 
-public class InventoryService : IInventoryService
+public partial class InventoryService : IInventoryService
 {
     private readonly ApplicationDbContext _context;
 
@@ -64,6 +64,30 @@ public class InventoryService : IInventoryService
             _context.Items.Remove(inventoryEntity);
             return await _context.SaveChangesAsync()==1;
         }
+
+        public async Task<InventoryDetail> GetInventoryDetailByEnum(ItemCategory category)
+        {
+            var entity = await _context.Items.SingleOrDefaultAsync(i=>i.Category==category);
+            if(entity != null)
+            {
+                return new InventoryDetail
+                {
+                    ID = entity.ID,
+                    Amount = entity.Amount,
+                    Category = entity.Category,
+                    ExpirationDate = entity.ExpirationDate
+                };
+                /*int count = 0;
+                foreach(ItemCategory  e in Enum.GetValues(typeof(ItemCategory)))
+                {
+                    count++;
+                    return itemDetail;
+                }*/
+
+            }
+            return null;
+        }
+        
         
     }
 
