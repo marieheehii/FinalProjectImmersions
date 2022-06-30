@@ -38,20 +38,20 @@ public class RecipeService : IRecipe
 
         return recipes;
     }
-    public async Task<RecipeEdit> UpdateRecipeAsync(int RecipeID, RecipeEdit model)
+    public async Task<bool> UpdateRecipeAsync(RecipeEdit model, int RecipeID)
     {
         var recipe = await _context.Recipes.FindAsync(model.RecipeID);
         if (recipe is null)
-            return null;
+            return false;
 
-        return new RecipeEdit
-        {
-            Name = model.Name,
-            Ingredients = model.Ingredients,
-            IngredientAmounts = model.IngredientAmounts,
-            Type = model.Type,
-            Instructions = model.Instructions
-        };
+            recipe.Name = model.Name;
+            recipe.Ingredients = model.Ingredients;
+            recipe.IngredientAmounts = model.IngredientAmounts;
+            recipe.Type = model.Type;
+            recipe.Instructions = model.Instructions;
+
+            await _context.SaveChangesAsync();
+            return true;
     }
     
     public async Task<bool> DeleteRecipeAsync(int RecipeID)

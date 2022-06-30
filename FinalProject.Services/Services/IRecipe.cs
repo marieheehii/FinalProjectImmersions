@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-    public interface IRecipe
-    {
-        Task<bool> CreateRecipeAsync(RecipeDetail model);
-        Task<IEnumerable<RecipeListItem>> ListAllRecipesAsync();
-        Task<
-        Task<RecipeEdit> UpdateRecipeAsync(int RecipeID, RecipeEdit model);
-        Task<bool> DeleteRecipeAsync(int RecipeID);
-        Task<RecipeDetail> GetRecipeByCategoryAsync(RecipeType type);
+public interface IRecipe
+{
+    Task<bool> CreateRecipeAsync(RecipeDetail model);
+    Task<IEnumerable<RecipeListItem>> ListAllRecipesAsync();
+    Task<bool> UpdateRecipeAsync(RecipeEdit model, int RecipeID);
+    Task<bool> DeleteRecipeAsync(int RecipeID);
+    Task<RecipeDetail> GetRecipeByCategoryAsync(RecipeType type);
 
-        // Task<RecipeItems> GetItemsForRecipeAsync(List<RecipeItems> items); //* get terrys help
-    }
+    // Task<RecipeItems> GetItemsForRecipeAsync(List<RecipeItems> items); //* get terrys help
+}
