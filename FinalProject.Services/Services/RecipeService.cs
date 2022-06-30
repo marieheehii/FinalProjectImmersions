@@ -40,7 +40,7 @@ public class RecipeService : IRecipe
     }
     public async Task<RecipeEdit> UpdateRecipeAsync(int RecipeID, RecipeEdit model)
     {
-        var recipe = await _context.Recipes.FindAsync(RecipeID);
+        var recipe = await _context.Recipes.FindAsync(model.RecipeID);
         if (recipe is null)
             return null;
 
@@ -52,8 +52,8 @@ public class RecipeService : IRecipe
             Type = model.Type,
             Instructions = model.Instructions
         };
-
     }
+    
     public async Task<bool> DeleteRecipeAsync(int RecipeID)
     {
         var recipe = await _context.Recipes.FindAsync(RecipeID);

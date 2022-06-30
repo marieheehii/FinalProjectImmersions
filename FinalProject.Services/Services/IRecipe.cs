@@ -7,6 +7,7 @@ using System.Threading.Tasks;
     {
         Task<bool> CreateRecipeAsync(RecipeDetail model);
         Task<IEnumerable<RecipeListItem>> ListAllRecipesAsync();
+        Task<
         Task<RecipeEdit> UpdateRecipeAsync(int RecipeID, RecipeEdit model);
         Task<bool> DeleteRecipeAsync(int RecipeID);
         Task<RecipeDetail> GetRecipeByCategoryAsync(RecipeType type);

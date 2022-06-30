@@ -28,20 +28,34 @@ public class RecipeController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllRecipes([FromForm] RecipeListItem recipe)
+    public async Task<IActionResult> GetAllRecipes()
     {
         var recipes = await _recipeService.ListAllRecipesAsync();
         return Ok(recipes);
     }
 
-    [HttpGet]
-    public async Task<IActionResult> GetRecipeByCategory(RecipeType type)
+    // [HttpGet]
+    // public async Task<IActionResult> GetRecipeByCategory()
+    // {
+    //     var recipe = await _recipeService.GetRecipeByCategoryAsync();
+    //     return Ok(recipe);
+    // }
+
+    [HttpPut]
+    [Route("{RecipeID}")]
+    public async Task<IActionResult> UpdateRecipe([FromForm] RecipeEdit model)
     {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
+
+        
+        
         
     }
 
+    [HttpPut]
+    public async Task<IActionResult> DeleteRecipe()
+    {
 
-    // [HttpPut]
-
-    // [HttpPut]
+    }
 }
