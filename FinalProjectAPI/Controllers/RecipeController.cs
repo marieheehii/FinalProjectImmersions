@@ -34,28 +34,35 @@ public class RecipeController : ControllerBase
         return Ok(recipes);
     }
 
-    // [HttpGet]
-    // public async Task<IActionResult> GetRecipeByCategory()
-    // {
-    //     var recipe = await _recipeService.GetRecipeByCategoryAsync();
-    //     return Ok(recipe);
-    // }
+    [HttpGet]
+    [Route("RecipeType/{typeOfRecipe}")]
+    public async Task<IActionResult> GetRecipeByCategory(RecipeType typeOfRecipe)
+    {
+        var recipe = await _recipeService.GetRecipeByCategoryAsync(typeOfRecipe);
+        return Ok(recipe);
+    }
 
     [HttpPut]
     [Route("{RecipeID}")]
-    public async Task<IActionResult> UpdateRecipe([FromForm] RecipeEdit model)
+    public async Task<IActionResult> UpdateRecipe([FromForm] RecipeEdit model, int RecipeID)
     {
         if (!ModelState.IsValid)
             return BadRequest(ModelState);
 
-        
-        
-        
+        return await _recipeService.UpdateRecipeAsync(model, RecipeID)
+        ? Ok($"Recipe was updated!")
+        : BadRequest($"Recipe was NOT updated!");
     }
 
-    [HttpPut]
-    public async Task<IActionResult> DeleteRecipe()
+    [HttpDelete]
+    [Route("{RecipeID}")]
+    public async Task<IActionResult> DeleteRecipe(int RecipeID)
     {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState);
 
+        return await _recipeService.DeleteRecipeAsync(RecipeID)
+        ? Ok($"Recipe was deleted!")
+        : BadRequest($"Recipe was NOT deleted!");
     }
 }
