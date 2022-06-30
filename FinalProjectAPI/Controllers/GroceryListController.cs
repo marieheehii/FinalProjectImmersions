@@ -4,7 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-    public class GroceryListController
+    [Route("[controller]")]
+    public class GroceryListController : ControllerBase
     {
-        
+        private readonly GListService listService;
+
+        public InventoryController 
+
     }
