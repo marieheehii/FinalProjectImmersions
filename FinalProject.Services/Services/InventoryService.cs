@@ -9,7 +9,10 @@ public class InventoryService : IInventoryService
 {
     private readonly ApplicationDbContext _context;
 
-
+public InventoryService(ApplicationDbContext context)
+{
+    _context = context;
+}
     public async Task<bool> CreateInventoryItemAsyc(KitchenInventoryModel model)
     {
             var item = new KitchenInventory
@@ -55,14 +58,12 @@ public class InventoryService : IInventoryService
         public async Task<bool> DeleteInventoryItemAsync(int itemId)
         {
             var inventoryEntity = await _context.Items.FindAsync(itemId);
-            if(itemId != null)
+            if(inventoryEntity != null)
             {
                 _context.Items.Remove(inventoryEntity);
                 return await _context.SaveChangesAsync() ==1;
             }
             return false;
-            _context.Items.Remove(inventoryEntity);
-            return await _context.SaveChangesAsync()==1;
         }
         
     }

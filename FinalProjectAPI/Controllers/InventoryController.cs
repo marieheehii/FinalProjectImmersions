@@ -4,42 +4,40 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FinalProjectAPI.Controllers
+[Route("[controller]")]
+public class InventoryController : ControllerBase
 {
-    [Route("[controller]")]
-    public class InventoryController : ControllerBase
+    private readonly IInventoryService inventoryService;
+
+    public InventoryController(IInventoryService inventoryService)
     {
-        private readonly IInventoryService inventoryService;
+        this.inventoryService = inventoryService;
+    }
 
-        public InventoryController(IInventoryService inventoryService)
+    [HttpPost("Register")]
+    public async Task<IActionResutlt> RegisterInventory([FromBody] InventoryRegister model)
+    {
+        if (!ModelState.IsValid)
         {
-            this.inventoryService = inventoryService;
+            return BadRequest(ModelState);
         }
-
-        [HttpPost("Register")]
-        public async Task<IActionResutlt> RegisterInventory([FromBody] InventoryRegister model)
+        var registerResult = await _service.CreateInventoryItemAsyc(model);
+        if (registerResult)
         {
-            if(!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-            var registerResult = await _service.CreateInventoryItemAsyc(model);
-            if (registerResult)
-            {
-                return OK("Inventory was registered");
-            }
-            return BadRequest("Inventory could not be registered");
+            return OK("Inventory was registered");
         }
-        
+        return BadRequest("Inventory could not be registered");
+    }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllInventoryItems()
-        {
-            var customers = inventoryService.GetInventoryListItemsAsync();
-            return Ok(customers);
-        }
 
-        public async Task<IActionResult> UpdateInventory([FromForm] InventoryUpdate model, [FromRoute] int id)
+    [HttpGet]
+    public async Task<IActionResult> GetAllInventoryItems()
+    {
+        var customers = inventoryService.GetInventoryListItemsAsync();
+        return Ok(customers);
+    }
+
+    public async Task<IActionResult> UpdateInventory([FromForm] InventoryUpdate model, [FromRoute] int id)
     {
         var oldInventory = await _service.Inventory.FindAsync(id);
         if (oldInventory == null)
@@ -70,6 +68,5 @@ namespace FinalProjectAPI.Controllers
         _context.items.Remove(items);
         await _context.SaveChangesAsync();
         return Ok("items was Deleted");
-    }
     }
 }
