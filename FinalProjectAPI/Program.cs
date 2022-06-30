@@ -17,7 +17,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<ICustomerService,CustomerService>();
+// builder.Services.AddScoped<ICustomerService,CustomerService>();
 builder.Services.AddScoped<IInventoryService,InventoryService>();
 // builder.Services.AddTransient(new CustomerService());
 // ^The way this is written isn't wrong, just another way of writing it out

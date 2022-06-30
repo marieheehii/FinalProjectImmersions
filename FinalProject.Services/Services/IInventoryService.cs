@@ -10,4 +10,6 @@ using System.Threading.Tasks;
         Task<IEnumerable<InventoryListItem>> GetInventoryListItemsAsync();
         Task<bool> UpdateInventoryAsync(InventoryUpdate request);
         Task<bool> DeleteInventoryItemAsync(int itemId);
+
+        
     }
