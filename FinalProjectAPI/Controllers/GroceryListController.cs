@@ -2,9 +2,10 @@
  using System.Collections.Generic;
  using System.Linq;
  using System.Threading.Tasks;
+ using Microsoft.AspNetCore.Mvc;
 
 
-    [Route("[controller]")]
+    /*[Route("[controller]")]
      public class GroceryListController : ControllerBase
      {
          private readonly GListService listService;
@@ -49,8 +50,5 @@
              }
             
          }
-
-
-
      }
-
+*/
