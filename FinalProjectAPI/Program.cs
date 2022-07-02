@@ -14,7 +14,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddScoped<ICustomerService, CustomerServices>();
+builder.Services.AddScoped<IRecipe, RecipeService>();
+builder.Services.AddScoped<IInventoryService,InventoryService>();
+// lines 3-19 (or when 'var app' appears) is our ioc container, which looksat how things are set up, change the ability of when and how things are set up.
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
