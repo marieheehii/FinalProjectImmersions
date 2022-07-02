@@ -19,7 +19,7 @@ namespace FinalProjectAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCustomers()
         {
-            var customers = customerService.GetCustomerListItemsAsync();
+            var customers = await customerService.GetCustomerListItemsAsync();
             return Ok(customers);
         }
     }
