@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.deps.json
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.dll
 /Users/hales/Desktop/1150/ElevenFiftyProjects/144_Immersions/BlueBadge_FinalProject/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.pdb
@@ -29,35 +28,3 @@ C:\144_immersions\FinalProject\FinalProject.Models\obj\Debug\net6.0\FinalProject
 C:\144_immersions\FinalProject\FinalProject.Models\obj\Debug\net6.0\refint\FinalProject.Models.dll
 C:\144_immersions\FinalProject\FinalProject.Models\obj\Debug\net6.0\FinalProject.Models.pdb
 C:\144_immersions\FinalProject\FinalProject.Models\obj\Debug\net6.0\ref\FinalProject.Models.dll
-=======
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.deps.json
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.dll
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.pdb
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Data.dll
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/bin/Debug/net6.0/FinalProject.Data.pdb
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.csproj.AssemblyReference.cache
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.GeneratedMSBuildEditorConfig.editorconfig
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.AssemblyInfoInputs.cache
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.AssemblyInfo.cs
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.csproj.CoreCompileInputs.cache
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.csproj.CopyComplete
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.dll
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/refint/FinalProject.Models.dll
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.pdb
-/Users/zackkramer/Documents/BlueBadgeFinale/FinalProjectImmersions/FinalProject.Models/obj/Debug/net6.0/ref/FinalProject.Models.dll
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.csproj.AssemblyReference.cache
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.GeneratedMSBuildEditorConfig.editorconfig
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.AssemblyInfoInputs.cache
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.AssemblyInfo.cs
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.csproj.CoreCompileInputs.cache
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.dll
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/refint/FinalProject.Models.dll
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.pdb
-C:/144_immersions/FinalProject/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.deps.json
-C:/144_immersions/FinalProject/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.dll
-C:/144_immersions/FinalProject/FinalProject.Models/bin/Debug/net6.0/FinalProject.Models.pdb
-C:/144_immersions/FinalProject/FinalProject.Models/bin/Debug/net6.0/FinalProject.Data.dll
-C:/144_immersions/FinalProject/FinalProject.Models/bin/Debug/net6.0/FinalProject.Data.pdb
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/FinalProject.Models.csproj.CopyComplete
-C:/144_immersions/FinalProject/FinalProject.Models/obj/Debug/net6.0/ref/FinalProject.Models.dll
->>>>>>> c87e0be6093190fd3fc9200baf51efbf98320eae

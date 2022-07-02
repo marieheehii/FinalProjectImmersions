@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 
-    public class GroceryListService : IGroceryListService
+    /*public class GroceryListService : IGroceryListService
     {
      private readonly ApplicationDbContext _context;
      public GroceryListService(ApplicationDbContext context)
@@ -53,3 +53,4 @@ using System.Threading.Tasks;
     }
 
     }
+    */
