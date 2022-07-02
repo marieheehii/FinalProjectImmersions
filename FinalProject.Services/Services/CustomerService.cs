@@ -10,9 +10,8 @@ public class CustomerServices : ICustomerService
         public CustomerServices(ApplicationDbContext context)
         {
             _context = context;
+            //^ will now hold all the data coming the ioc container because we made it equal.
         }
-        private readonly int _customerID;
-
         public async Task<IEnumerable<CustomerListItem>> GetCustomerListItemsAsync()
         {
             var customers = await _context.Customers

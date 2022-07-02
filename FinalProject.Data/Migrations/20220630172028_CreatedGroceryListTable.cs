@@ -5,16 +5,33 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FinalProject.Data.Migrations
 {
-    public partial class initMigration : Migration
+    public partial class CreatedGroceryListTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Customers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Customers", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "GroceryLists",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ItemName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Amount = table.Column<int>(type: "int", nullable: false),
+                    DayofTrip = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -36,26 +53,6 @@ namespace FinalProject.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Recipes", x => x.RecipeID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Customers",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GroceryListID = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Customers", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Customers_GroceryLists_GroceryListID",
-                        column: x => x.GroceryListID,
-                        principalTable: "GroceryLists",
-                        principalColumn: "ID");
                 });
 
             migrationBuilder.CreateTable(
@@ -81,11 +78,6 @@ namespace FinalProject.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Customers_GroceryListID",
-                table: "Customers",
-                column: "GroceryListID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Items_RecipeID",
                 table: "Items",
                 column: "RecipeID");
@@ -97,10 +89,10 @@ namespace FinalProject.Data.Migrations
                 name: "Customers");
 
             migrationBuilder.DropTable(
-                name: "Items");
+                name: "GroceryLists");
 
             migrationBuilder.DropTable(
-                name: "GroceryLists");
+                name: "Items");
 
             migrationBuilder.DropTable(
                 name: "Recipes");

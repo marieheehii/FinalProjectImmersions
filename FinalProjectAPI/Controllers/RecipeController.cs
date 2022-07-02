@@ -2,67 +2,24 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
-[Route("[controller]")]
-[ApiController]
-public class RecipeController : ControllerBase
+
+public class RecipeController
 {
     public readonly IRecipe _recipeService;
     public RecipeController(IRecipe recipeService)
     {
         _recipeService = recipeService;
     }
+    
+    // [HttpPost]
+    // public async Task<IActionResult>
 
-    [HttpPost]
-    public async Task<IActionResult> AddRecipe([FromForm] RecipeDetail model)
-    {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
+    // [HttpGet]
 
-        var addedRecipe = await _recipeService.CreateRecipeAsync(model);
-        if (addedRecipe)
-            return Ok("Recipe was added!");
+    // [HttpGet]
 
-        return BadRequest("Recipe was NOT added!");
-    }
+    // [HttpPut]
 
-    [HttpGet]
-    public async Task<IActionResult> GetAllRecipes()
-    {
-        var recipes = await _recipeService.ListAllRecipesAsync();
-        return Ok(recipes);
-    }
-
-    [HttpGet]
-    [Route("RecipeType/{typeOfRecipe}")]
-    public async Task<IActionResult> GetRecipeByCategory(RecipeType typeOfRecipe)
-    {
-        var recipe = await _recipeService.GetRecipeByCategoryAsync(typeOfRecipe);
-        return Ok(recipe);
-    }
-
-    [HttpPut]
-    [Route("{RecipeID}")]
-    public async Task<IActionResult> UpdateRecipe([FromForm] RecipeEdit model, int RecipeID)
-    {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
-        return await _recipeService.UpdateRecipeAsync(model, RecipeID)
-        ? Ok($"Recipe was updated!")
-        : BadRequest($"Recipe was NOT updated!");
-    }
-
-    [HttpDelete]
-    [Route("{RecipeID}")]
-    public async Task<IActionResult> DeleteRecipe(int RecipeID)
-    {
-        if (!ModelState.IsValid)
-            return BadRequest(ModelState);
-
-        return await _recipeService.DeleteRecipeAsync(RecipeID)
-        ? Ok($"Recipe was deleted!")
-        : BadRequest($"Recipe was NOT deleted!");
-    }
+    // [HttpPut]
 }

@@ -32,15 +32,10 @@ namespace FinalProject.Data.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("GroceryListID")
-                        .HasColumnType("int");
-
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("GroceryListID");
 
                     b.ToTable("Customers");
                 });
@@ -52,6 +47,16 @@ namespace FinalProject.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DayofTrip")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ItemName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
@@ -117,23 +122,11 @@ namespace FinalProject.Data.Migrations
                     b.ToTable("Recipes");
                 });
 
-            modelBuilder.Entity("Customer", b =>
-                {
-                    b.HasOne("GroceryList", null)
-                        .WithMany("Customers")
-                        .HasForeignKey("GroceryListID");
-                });
-
             modelBuilder.Entity("KitchenInventory", b =>
                 {
                     b.HasOne("Recipe", null)
                         .WithMany("Items")
                         .HasForeignKey("RecipeID");
-                });
-
-            modelBuilder.Entity("GroceryList", b =>
-                {
-                    b.Navigation("Customers");
                 });
 
             modelBuilder.Entity("Recipe", b =>
